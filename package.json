@@ -1,0 +1,31 @@
+{
+  "name": "telegram-bot-server",
+  "version": "1.0.0",
+  "description": "Server for Telegram bot with WebApp support",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "webapp"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "telegraf": "^4.12.2",
+    "@twa-dev/sdk": "^1.0.2",
+    "node-cron": "^3.0.2",
+    "socket.io": "^4.7.5",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

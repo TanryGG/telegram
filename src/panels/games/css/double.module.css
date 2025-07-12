@@ -1,0 +1,62 @@
+.table {
+    width: 100%;
+    text-align: center;
+    min-height: 220px;
+    position: relative;
+    padding: 20px 0;
+}
+.roulette {
+    position: relative;
+}
+.wheel {
+    width: 90%;
+    max-width: 280px;
+}
+.pointer {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 90%;
+    max-width: 280px;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.timer {
+    position: absolute;
+    top: 133px;
+    left: 0;
+    right: 0;
+    color: #1abc9c;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 50px;
+}
+.state {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.results {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: .9;
+    -webkit-animation: show-result-text 1s linear both;
+    animation: show-result-text 1s linear both;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}

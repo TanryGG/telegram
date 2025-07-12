@@ -1,0 +1,176 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);
+
+* {
+  margin: 0px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-weight: 600;
+}
+
+.vkui,
+.vkui>body {
+  background: var(--color_background_buttons_bg) !important;
+}
+
+
+:root {
+  --color_background_buttons_bg: #1a162a;
+  /*#1a162a;*/
+  --color_background_buttons: rgb(29, 30, 51);
+  --field_background: rgb(29, 30, 51);
+  --icon_outline_secondary: white;
+  --color_background_buttons_dark: rgb(23, 24, 41);
+  --background_chat: rgba(0, 0, 0, .4);
+  --radius_button: 25px;
+  --modal_card_background: var(--color_background_buttons);
+  --background_name: rgba(29, 30, 51, 0.8);
+  --separator_common: graytext;
+  --text_primary: white;
+  --field_error_background: var(--color_background_buttons);
+  --header_text_alternate: "white";
+}
+
+.vkui--vkCom--dark,
+.vkui--vkCom--light,
+.vkui--vkIOS--dark,
+.vkui--vkIOS--light,
+:root {
+  --vkui--color_background_content: var(--color_background_buttons_bg) !important;
+  --vkui--color_text_primary: white !important;
+  --vkui--color_field_background: var(--color_background_buttons) !important;
+  --vkui--color_background_modal: var(--color_background_buttons) !important;
+  --vkui--color_background_negative_tint: transparent !important;
+  --vkui--color_background_secondary: transparent !important;
+}
+
+.vkuiPanel:after {
+  content: none !important;
+}
+
+.vkuiPanelHeader__in {
+  background: var(--color_background_buttons);
+}
+
+
+
+/* body[topic=ligth] {
+	--color_background_buttons_bg: #124682;
+	--color_background_buttons: #033869;
+	--field_background: #033869;
+	--icon_outline_secondary: white;
+	--color_background_buttons_dark: #03224f;
+	--background_chat: rgba(0, 0, 0, .4);
+	--radius_button: 22px;
+	--modal_card_background: var(--color_background_buttons);
+	--background_name: rgba(12, 3, 105, 0.8);
+	--separator_common: graytext;
+	--text_primary: white;
+	--field_error_background: var(--color_background_buttons);
+    --header_text_alternate: "white";
+} */
+
+
+
+/* body {
+  margin:0px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  --background_content: var(--color_background_buttons_bg);
+  --header_background:var(--color_background_buttons) !important;
+  --header_alternate_background:var(--color_background_buttons) !important;
+  --header_text:white !important;
+  --font-tt: "TT Commons",-apple-system,system-ui,Helvetica Neue,Roboto,sans-serif !important;
+  --header_tint:white !important;
+  --thin-border:0px !important;
+  --background_suggestions:transparent !important;
+  --accent:#1ABC9C !important;
+  --tabbar_background:#1F2936 !important;
+  --search_bar_background: var(--color_background_buttons_bg) !important;
+  --search_bar_field_background:var(--color_background_buttons) !important;
+  --ios-easing: cubic-bezier(0.36,0.66,0.04,1) !important;
+    --android-easing: cubic-bezier(0.4,0,0.2,1) !important;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+} */
+
+.verticalText {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.vkIcon {
+  display: inline-block;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.vkuiModalPage--android .vkuiModalPage__in-wrap,
+.vkuiModalPage--vkcom .vkuiModalPage__in-wrap {
+  transition: -webkit-transform 0.25s cubic-bezier(.4, 0, .2, 1);
+  transition: transform 0.25s cubic-bezier(.4, 0, .2, 1);
+  transition: transform 0.25s cubic-bezier(.4, 0, .2, 1), -webkit-transform 0.25s cubic-bezier(.4, 0, .2, 1);
+  transition: transform 0.25s cubic-bezier(.4, 0, .2, 1), -webkit-transform 0.25s cubic-bezier(.4, 0, .2, 1);
+  transition: -webkit-transform 0.25s var(--android-easing);
+  transition: transform 0.25s var(--android-easing);
+  transition: transform 0.25s var(--android-easing), -webkit-transform 0.25s var(--android-easing);
+  transition: transform 0.25s var(--android-easing), -webkit-transform 0.25s var(--android-easing);
+}
+
+
+.vkuiModalCard--android .vkuiModalCard__in,
+.vkuiModalCard--vkcom .vkuiModalCard__in {
+  transition: -webkit-transform 0.25s cubic-bezier(.4, 0, .2, 1);
+  transition: transform 0.25s cubic-bezier(.4, 0, .2, 1);
+  transition: transform 0.25s cubic-bezier(.4, 0, .2, 1), -webkit-transform 0.25s cubic-bezier(.4, 0, .2, 1);
+  transition: transform 0.25s cubic-bezier(.4, 0, .2, 1), -webkit-transform 0.25s cubic-bezier(.4, 0, .2, 1);
+  transition: -webkit-transform 0.25s var(--android-easing);
+  transition: transform 0.25s var(--android-easing);
+  transition: transform 0.25s var(--android-easing), -webkit-transform 0.25s var(--android-easing);
+  transition: transform 0.25s var(--android-easing), -webkit-transform 0.25s var(--android-easing);
+}
+
+.desc {
+  font-weight: 300;
+  color: rgb(236, 240, 241);
+}
+
+.desc b {
+  font-weight: 300;
+  color: #bdc3c7;
+}
+
+.myPromo .vkuiSimpleCell__children {
+  color: #ecf0f1 !important;
+  font-weight: 500;
+  letter-spacing: .15em;
+  font-size: 15px;
+}
+
+.myPromo .vkuiSimpleCell__description {
+  margin-top: 0px;
+}
+
+
+.vkuiModalPage--android .vkuiModalPage__in,
+.vkuiModalPage--vkcom .vkuiModalPage__in {
+  border-radius: 5px 5px 0 0;
+}
+
+.vkuiModalCard--android .vkuiModalCard__container,
+.vkuiModalCard--vkcom .vkuiModalCard__container {
+  border-radius: 5px;
+}
+
+.gameAlcoSlots .gameContent .table .lines .line .anim.finish.n1 {
+  -webkit-animation: slotsScrollAnim2 3s cubic-bezier(0, 0, .1, 1.05) both;
+  animation: slotsScrollAnim2 3s cubic-bezier(0, 0, .1, 1.05) both
+}

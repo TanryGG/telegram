@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#1d1e33">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <title>BestCoin</title>
+    
+    <!-- Telegram WebApp Script -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #1d1e33;
+            color: white;
+            overscroll-behavior: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        #app {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* Стили для скроллбара в Telegram */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script>
+        // Инициализация Telegram WebApp
+        document.addEventListener('DOMContentLoaded', function() {
+            const tgWebApp = window.Telegram?.WebApp;
+            
+            if (tgWebApp) {
+                // Раскрываем приложение на весь экран
+                tgWebApp.expand();
+                
+                // Настройки внешнего вида
+                tgWebApp.setHeaderColor('#1d1e33');
+                tgWebApp.setBackgroundColor('#1d1e33');
+                
+                // Включаем подтверждение при закрытии
+                tgWebApp.enableClosingConfirmation();
+                
+                // Обработчик кнопки "Назад" в Telegram
+                tgWebApp.onEvent('backButtonClicked', function() {
+                    // Можно добавить свою логику обработки нажатия назад
+                    tgWebApp.close();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "app_name": "BestCoin",
+  "app_description": "Игровое приложение с различными азартными играми",
+  "app_version": "1.0.0",
+  "app_url": "https://yourdomain.com/index.html",
+  "app_icon": "https://yourdomain.com/icon.png",
+  "app_color": "#1d1e33",
+  "manifest_url": "https://yourdomain.com/manifest.json",
+  "features": {
+    "web_app_expanded": true,
+    "web_app_closing_confirmation": true,
+    "web_app_theme_params": {
+      "bg_color": "#1d1e33",
+      "secondary_bg_color": "#2a2b45",
+      "text_color": "#ffffff",
+      "hint_color": "#aaaaaa",
+      "link_color": "#5e9be5",
+      "button_color": "#5e9be5",
+      "button_text_color": "#ffffff"
+    }
+  }
+}

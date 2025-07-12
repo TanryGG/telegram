@@ -1,0 +1,4438 @@
+@import url('./global.css');
+
+* {
+	/* box-sizing: border-box; */
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", serif;
+}
+
+.vkuiFormField.vkuiInput .vkuiInput__el:focus~.vkuiFormField__border, .vkuiFormField.vkuiTextarea .vkuiTextarea__el:focus~.vkuiFormField__border, .vkuiFormField.vkuiSelect .vkuiSelect__el:focus~.vkuiFormField__border, .vkuiFormField.vkuiSelect--mimicry:focus .vkuiFormField__border, .vkuiFormField.vkuiChipsInput--focused .vkuiChipsInput__container~.vkuiFormField__border, .vkuiFormItem--error .vkuiFormField__border {
+	border-color: transparent;
+}
+.vkuiFormItem--error .vkuiFormItem__bottom {
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+}
+.vkuiSeparator:not(.vkuiSeparator--wide).vkuiSeparator--ios .vkuiSeparator__in {
+	margin: 0;
+}
+
+.vkuiPanelHeader--sizeX-compact .vkuiPanelHeader__separator {
+	padding: 0;
+}
+
+.vkuiSpinner {
+	background-color: var(--color_background_buttons);
+	border-radius: 25%;
+}
+
+.vkuiAlert--ios .vkuiAlert__content {
+	padding: 0;
+}
+
+.vkuiScreenSpinner--android .vkuiScreenSpinner__container,
+.vkuiScreenSpinner--vkcom .vkuiScreenSpinner__container {
+	width: 88px;
+	height: 88px;
+	background: var(--color_background_buttons);
+	box-shadow: 0 16px 32px 0 var(--background_name), 0 0 8px 0 var(--background_name);
+	border-radius: 26%;
+}
+
+.BalanceImg {
+	background-color: transparent;
+	border-radius: 2px;
+}
+
+.NumberView__description {
+	font-size: 14px;
+	line-height: 14px;
+	color: black;
+	margin-bottom: 10px;
+}
+
+.addcom:hover {
+	cursor: pointer;
+}
+
+.NumberView__description,
+.NumberView__value {
+	font-family: TT Commons, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, sans-serif;
+	font-weight: 400;
+}
+
+.NumberView__value {
+	font-size: 32px;
+	line-height: 32px;
+	color: var(--text_primary);
+	white-space: nowrap;
+}
+@keyframes slotsDiamondAnim {
+    0% {
+        color: #ef5350
+    }
+
+    24.9999% {
+        color: #ef5350
+    }
+
+    25% {
+        color: #42a5f5
+    }
+
+    49.9999% {
+        color: #42a5f5
+    }
+
+    50% {
+        color: #ffca28
+    }
+
+    74.9999% {
+        color: #ffca28
+    }
+
+    75% {
+        color: #66bb6a
+    }
+
+    99.9999% {
+        color: #66bb6a
+    }
+}
+
+@keyframes slotsScrollAnim {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    to {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%)
+    }
+}
+/* .gameAlcoSlots.gameContent.table.lines.line:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, var(--color_background_buttons_dark), transparent 10%, transparent 90%, var(--color_background_buttons_dark))
+} */
+@keyframes slotsLineAnimLeft {
+    0% {
+        border-left: 7px solid #ef5350
+    }
+
+    24.9999% {
+        border-left: 7px solid #ef5350
+    }
+
+    25% {
+        border-left: 7px solid #42a5f5
+    }
+
+    49.9999% {
+        border-left: 7px solid #42a5f5
+    }
+
+    50% {
+        border-left: 7px solid #ffca28
+    }
+
+    74.9999% {
+        border-left: 7px solid #ffca28
+    }
+
+    75% {
+        border-left: 7px solid #66bb6a
+    }
+
+    99.9999% {
+        border-left: 7px solid #66bb6a
+    }
+}
+@keyframes slotsLineAnimRight {
+    0% {
+        border-right: 7px solid #ef5350
+    }
+
+    24.9999% {
+        border-right: 7px solid #ef5350
+    }
+
+    25% {
+        border-right: 7px solid #42a5f5
+    }
+
+    49.9999% {
+        border-right: 7px solid #42a5f5
+    }
+
+    50% {
+        border-right: 7px solid #ffca28
+    }
+
+    74.9999% {
+        border-right: 7px solid #ffca28
+    }
+
+    75% {
+        border-right: 7px solid #66bb6a
+    }
+
+    99.9999% {
+        border-right: 7px solid #66bb6a
+    }
+}
+@keyframes slotsScrollAnim2 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    to {
+        -webkit-transform: translateY(calc(-100% + 200px));
+        transform: translateY(calc(-100% + 200px))
+    }
+}
+
+.NumberView__value:after {
+	display: inline-block;
+	width: 27px;
+	height: 27px;
+	content: "";
+	background-image: url(https://vk.com);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	margin-left: 8px;
+	vertical-align: -4px;
+}
+
+.vkuiPanel.vkuiPanel--regular .vkuiPanel__in,
+.vkuiPanel.vkuiPanel--regular::after {
+	background-color: var(--background_content);
+}
+
+.NumberView {
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: 0 0 8px 1px rgba(0, 0, 0, .04), 0 8px 20px 0 rgba(0, 0, 0, .07);
+	box-sizing: border-box;
+	padding: 10px;
+
+}
+
+.feedу {
+	color: #1ABC9C;
+}
+
+.TabbarItem--selected {
+	color: white;
+}
+
+
+.TabbarItem--selected.feedу {
+	color: white;
+	background-color: #1ABC9C;
+
+	border-radius: 5px 5px 0px 0px;
+	transition: all 120ms linear;
+	position: relative;
+	transform: translateY(0);
+}
+
+.TabbarItem .Counter__in {
+	font-size: 10px;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.DiceImg {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	border-radius: 5px;
+	background: url(https://ngv2.coin-wheel.ru/static/media/dice.53ba3fd7.png) no-repeat center center;
+	background-size: cover;
+}
+
+.DoubleImg {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	border-radius: 5px;
+	background: url(https://psv4.userapi.com/c536436/u231437423/docs/d10/58bc0016a4af/InShot_20210220_185520321.jpg?extra=J6P0WpTuJ439WMwW-CsA49WEh0A2WAygEn62yMeS3yuMxXhMlW-yGPjaclz5LITDWH73g6JtfwTs-uTcF9BKNr-srY8O7RgHDTEuI3B6xq7ULYZp1mMbiqujFeg-RgriLrtzUApfpHOF2L0fa4tmZw) no-repeat center center;
+	background-size: cover;
+}
+
+.WheelImg {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	border-radius: 5px;
+	background: url(https://sun9-49.userapi.com/impg/nKsh5zx2upEKrloyhq-qb8I0fqEsADQrkJVjzg/6_VU5NTYjHQ.jpg?size=958x538&quality=96&sign=3235ba0966e8d9d7c54d1c2eb43a5350&type=album) no-repeat center center;
+	background-size: cover;
+}
+
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.name {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: white;
+	text-transform: uppercase;
+	font-size: 21px;
+	font-weight: 300;
+	border-radius: 0 0 var(--radius_button) var(--radius_button);
+	padding-top: 2px;
+	transition: all .1s linear;
+	background: var(--background_name);
+}
+
+.vkuiCard__in.Card__in {
+	height: 100%;
+}
+
+#promobutton {
+	color: #1ABC9C;
+}
+
+.videoButton {
+	margin-bottom: 10px;
+	background: var(--color_background_buttons);
+	border-radius: 2px;
+	padding: 20px 10px;
+	position: relative;
+	overflow: hidden;
+	color: #F39C12;
+	transition: transform .1s linear, -webkit-transform .1s linear;
+}
+
+.videoButton:active {
+	transform: scale(.9);
+}
+
+.shopButton:active {
+	transform: scale(.9);
+}
+
+.videoButton .title {
+	float: left;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 21px;
+	margin-left: 57px;
+	transform-origin: 50% 50%;
+}
+
+#videobonus .title {
+	float: right;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 21px;
+	margin-right: 49px;
+	transform-origin: 50% 50%;
+}
+
+.videoButton .icon {
+	position: absolute;
+	top: 2px;
+	left: -23px;
+}
+
+#videobonus .icon {
+	position: absolute;
+	top: 2px;
+	left: calc(100% - 59px);
+}
+
+.videoButton:active .icon {
+	transform: translate(-12px, 12px) scale(.95);
+}
+
+#videobonus:active .icon {
+	transform: translate(12px, 12px) scale(.95);
+}
+
+.shopButton:active .icon {
+	transform: translate(-12px, 12px) scale(.95);
+}
+
+.shopButton,
+.profile,
+.shopButton,
+.icon {
+	transition: -webkit-transform .1s linear;
+	transition: transform .1s linear;
+	transition: transform .1s linear, -webkit-transform .1s linear;
+}
+
+.videoButton,
+.profile,
+.shopButton,
+.icon {
+	transition: -webkit-transform .1s linear;
+	transition: transform .1s linear;
+	transition: transform .1s linear, -webkit-transform .1s linear;
+}
+
+.shopButton {
+	margin-bottom: 10px;
+	background: var(--color_background_buttons);
+	border-radius: 2px;
+	padding: 20px 10px;
+	position: relative;
+	overflow: hidden;
+	color: #E74C3C;
+
+}
+
+.shopButton .title {
+
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 21px;
+	margin-left: 44px;
+	transform-origin: 50% 50%;
+}
+
+.shopButton .icon {
+	position: absolute;
+	top: 2px;
+	left: -23px;
+
+}
+
+.balance .coins {
+	padding-top: 2px;
+	font-weight: 600;
+	line-height: 30px;
+	display: inline-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.verticalText {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.balance {
+	position: relative;
+	background-size: cover;
+	border-radius: 4px;
+	text-align: center;
+	padding: 30px 10px;
+
+	font-size: 38px;
+	font-weight: 300;
+
+	color: #ecf0f1;
+}
+
+.balance .coinsTop {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.PanelHeaderContent__children-in {
+	font-size: 21px;
+	font-weight: 800;
+}
+
+#sendbutton {
+	color: #3498DB;
+}
+
+.vkuiCard--md-outline::before {
+	display: none;
+}
+
+.userCell {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 6px 0;
+}
+
+.userCell .avatar {
+	position: relative;
+	margin-right: 15px;
+}
+
+.ratingPage {
+	margin: 0 15px;
+	margin-top: 15px;
+}
+
+.table {
+	margin-right: 12px;
+}
+
+.ratingPosition {
+	color: #1abc9c;
+	min-width: 22px;
+	padding-right: 5px;
+	font-size: 12pt;
+	text-align: left;
+	font-weight: 700;
+}
+
+.userCell .avatar .ratingAvatar {
+	border-radius: 50%;
+	background: var(--color_background_buttons);
+}
+
+.userCell .avatar .position {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	bottom: -2px;
+	right: -2px;
+	background: #0E1621;
+	color: #1abc9c;
+	border-radius: 50%;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	font-weight: 500;
+}
+
+.userCell .contentPart {
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	max-width: calc(100% - 125px);
+}
+
+.userCell .contentPart .name2 {
+	font-size: 17px;
+	font-weight: 400;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.usersColorsBase {
+	color: #fff;
+}
+
+.userCell .contentPart .desc {
+	font-size: 13px;
+	color: var(--text_secondary);
+}
+
+.userCell .rightPart {
+	min-width: 64px;
+}
+
+.prize {
+	text-align: center;
+}
+
+.prize .header {
+	font-size: 12px;
+	color: #ecf0f1;
+	opacity: .5;
+	font-weight: 300;
+}
+
+.prize .sum {
+	margin-top: -2px;
+	font-size: 18px;
+	color: #2ecc71;
+	font-weight: 600;
+}
+
+.prize .sum .rub {
+	padding-left: 4px;
+}
+
+.verticalText {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.bottom {
+	display: -webkit-flex;
+	display: flex;
+	border-top: 2px solid #1abc9c;
+	background: var(--color_background_buttons);
+	padding: 10px 0;
+	color: #ecf0f1;
+}
+
+.bottom .fund {
+	width: 49.5%;
+	text-align: center;
+}
+
+.bottom .fund .title {
+	font-weight: 200;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.bottom .fund .count {
+	margin-top: 3px;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.bottom .cLine {
+	width: 1%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.bottom .end,
+.bottom .fund {
+	width: 49.5%;
+	text-align: center;
+}
+
+.paddingWrapper {
+	padding: 0 12px;
+}
+
+.infoBlock {
+	border-radius: 4px;
+	overflow: hidden;
+	margin-top: 10px;
+	color: #ecf0f1;
+}
+
+.infoBlock .top {
+	padding: 13px 10px 20px 15px;
+	background: var(--color_background_buttons);
+	position: relative;
+}
+
+.infoBlock .top:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color_background_buttons);
+	opacity: .8;
+	z-index: 0;
+}
+
+.infoBlock .top .header {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.infoBlock .top .header .title {
+	font-size: 21px;
+	font-weight: 400;
+}
+
+.infoBlock .top .text {
+	font-weight: 300;
+	margin-top: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+.bottom .cLine div {
+	width: 100%;
+	max-width: 1px;
+	height: 20px;
+	background: hsla(0, 0%, 100%, .5);
+	border-radius: 8px;
+}
+
+.bottom .end .title,
+.Rating .infoBlock .bottom .fund .title {
+	font-weight: 200;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.bottom .end .title,
+.Rating .infoBlock .bottom .fund .title {
+	font-weight: 200;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.bottom .end .count,
+.Rating .infoBlock .bottom .fund .count {
+	margin-top: 3px;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.vkuiTabbar--ios.vkuiTabbar--shadow:before {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	-webkit-transform-origin: center bottom;
+	transform-origin: center bottom;
+	content: "";
+}
+
+.vkuiPanel:after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	z-index: 1;
+	content: "";
+}
+
+
+.vkuiTabbar--ios.vkuiTabbar--shadow::before {
+	background: transparent;
+}
+@keyframes tower-animation-1 {
+    0% {
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+
+    75% {
+        -webkit-transform: translate(1.2, 1.2);
+        transform: translate(1.2, 1.2)
+    }
+
+    to {
+        -webkit-transform: translate(1, 1);
+        transform: translate(1, 1)
+    }
+}
+@keyframes tower-animation-3 {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .6
+    }
+
+    to {
+        opacity: 1
+    }
+}
+.meintop {
+	border-radius: 50px;
+	border-color: #1ABC9C;
+	border-style: solid;
+	border-width: 2px;
+}
+
+.shopButton,
+.videoButton,
+.BalanceImg.vkuiCard.vkuiCard--ios.Card.Card--ios.vkuiCard--md-tint.Card--md-tint,
+.vkuiCard__in.Card__in,
+.game,
+.infoBlock,
+.MyUserTop,
+.addcom,
+.balanceBlock,
+.vkuiSimpleCell.vkuiSimpleCell--ios.SimpleCell.SimpleCell--ios.vkuiSimpleCell--sizeY-regular.SimpleCell--sizeY-regular {
+	border-radius: var(--radius_button);
+}
+
+.vkuiPullToRefresh--ios .vkuiPullToRefresh__spinner {
+	color: white;
+}
+
+/* 
+.navigation {
+	width: 100%;
+	height: 70px;
+	background-color: rgb(29, 30, 51);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	--clc: calc(100% / 4);
+}
+
+.navigation ul {
+	display: flex;
+	width: 100%;
+}
+.navigation ul li {
+	position: relative;
+	list-style: none;
+	width: calc(100% / 4);
+	height: 70px;
+	z-index: 1;
+}
+.navigation ul li div {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navigation ul li div .icon {
+	position: relative;
+	display: block;
+	line-height: 75px;
+	font-size: 1.5em;
+	text-align: center;
+	transition: 0.5s;
+}
+.navigation ul li.active div .icon {
+	transform: translateY(-32px);
+}
+.navigation ul li div .text {
+	position: absolute;
+	color: white;
+	font-weight: 400;
+	font-size: 0.75em;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+	opacity: 0;
+	transform: translateY(10px);
+}
+.navigation ul li.active div .text {
+	opacity: 1;
+}
+.indicator {
+	position: absolute;
+	width: calc((100% / 4) / 2);
+	margin-left: calc((100% / 4) / 4);
+	height: 70px;
+	background: linear-gradient(#6d85de, #0c2787);
+	top: -50%;
+	border-radius: 50%;
+	border: 6px solid #1a162a;
+	transition: 0.5s;
+}
+.indicator::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -22px;
+	width: 20px;
+	height: 20px;
+	background: rgb(29, 30, 51);
+	border-top-right-radius: 20px;
+	box-shadow: 0px -10px 0 0 #1a162a;
+}
+.indicator::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -22px;
+	width: 20px;
+	height: 20px;
+	background: rgb(29, 30, 51);
+	border-top-left-radius: 20px;
+	box-shadow: 0px -10px 0 0 #1a162a;
+}
+.navigation ul li:nth-child(1).active ~ .indicator {
+	transform: translateX(calc((100% * 2) * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+	transform: translateX(calc((100% * 2) * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+	transform: translateX(calc((100% * 2) * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+	transform: translateX(calc((100% * 2) * 3));
+} */
+
+.messagesList.new {
+	transition: 0.5s;
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.button {
+	transition: all .13s ease;
+}
+
+.button:active {
+	transform: scale(0.94);
+	opacity: 0.6;
+}
+
+.stat:after {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../panels/img/stat_win.png) no-repeat 50%;
+	background-size: cover;
+	pointer-events: none;
+}
+
+@-webkit-keyframes wheel-animation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(10turn);
+		transform: rotate(10turn)
+	}
+}
+
+@keyframes wheel-animation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(10turn);
+		transform: rotate(10turn)
+	}
+}
+
+@-webkit-keyframes ball-animation-2 {
+	0% {
+		-webkit-transform: translate(0);
+		transform: translate(0)
+	}
+
+	75% {
+		-webkit-transform: translate(0);
+		transform: translate(0)
+	}
+
+	to {
+		-webkit-transform: translateY(-50px);
+		transform: translateY(-35px)
+	}
+}
+
+@keyframes ball-animation-2 {
+	0% {
+		-webkit-transform: translate(0);
+		transform: translate(0)
+	}
+
+	75% {
+		-webkit-transform: translate(0);
+		transform: translate(0)
+	}
+
+	to {
+		-webkit-transform: translateY(-50px);
+		transform: translateY(-35px)
+	}
+}
+
+@-webkit-keyframes ball-animation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(-10turn);
+		transform: rotate(-10turn)
+	}
+}
+
+@keyframes ball-animation {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(-10turn);
+		transform: rotate(-10turn)
+	}
+}
+
+@-webkit-keyframes show-result-text {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(3);
+		transform: scale(3)
+	}
+
+	to {
+		opacity: .9;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+@keyframes show-result-text {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0)
+	}
+
+	to {
+		opacity: .9;
+		-webkit-transform: scale(1);
+		transform: scale(1)
+	}
+}
+
+@keyframes dice-show-result-text {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4)
+    }
+
+    60% {
+        opacity: 0;
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4)
+    }
+
+    to {
+        opacity: .8;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.coef {
+	position: absolute;
+	top: 5px;
+	left: 9px;
+	font-size: 9px;
+	font-weight: 300;
+	color: #fff;
+}
+
+/**/
+
+.gameDice .gameContent .dicesBlock {
+	position: relative;
+	height: 200px;
+	background: var(--events_card_color_bg);
+	border-radius: var(--radius_button);
+	text-align: center;
+	overflow: hidden
+}
+
+.gameDice .gameContent .dicesBlock .waitIcon {
+	margin-top: 55px;
+	display: inline-block;
+	color: white
+}
+
+.gameDice .gameContent .dicesBlock .waitText {
+	color: white;
+	font-family: "Montserrat", serif;
+	font-size: 24px;
+	font-weight: 500
+}
+
+.gameDice .gameContent .dicesBlock .timer {
+	padding-top: 57px;
+	color: var(--bw_color_text);
+	font-family: "Montserrat", serif;
+	font-size: 70px;
+	font-weight: 500
+}
+
+.gameDice .gameContent .dicesBlock .resultText {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	line-height: 200px;
+	top: 0;
+	left: 0;
+	background: var(--transparent_chat_color_bg);
+	color: var(--bw_color_text);
+	text-align: center;
+	font-family: "Montserrat", serif;
+	font-size: 100px;
+	font-weight: 500;
+	opacity: .8;
+	-webkit-animation: dice-show-result-text 2s linear both;
+	animation: dice-show-result-text 2s linear both;
+}
+
+.gameDice .gameContent .dicesBlock .diceWrapper {
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+	height: 200px
+}
+
+.gameDice .gameContent .dicesBlock .dice {
+	display: inline-block;
+	width: 70px;
+	position: relative;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	box-shadow: 2px 2px 10px 0 #000
+}
+
+.gameDice .gameContent .dicesBlock .dice .face {
+	width: 68px;
+	height: 68px;
+	position: absolute;
+	background-color: #0d0e2c;
+	border: 1px solid #23244e;
+	border-radius: 2px
+}
+
+.gameDice .gameContent .dicesBlock .dice .face .ball {
+	width: 14px;
+	height: 14px;
+	display: block;
+	float: left;
+	border-radius: 50%;
+	background-color: #535481
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.f1 {
+	transform: translateZ(35px);
+	-webkit-transform: translateZ(35px)
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.one .ball {
+	top: 25px;
+	right: 25px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.f2 {
+	transform: rotateX(-90deg) translateY(-35px);
+	transform-origin: top center;
+	-webkit-transform: rotateX(-90deg) translateY(-35px);
+	-webkit-transform-origin: top center
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.two .ball:first-child {
+	top: 12px;
+	left: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.two .ball:nth-child(2) {
+	bottom: 12px;
+	right: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.f3 {
+	transform: rotateY(-270deg) translateX(35px);
+	transform-origin: top right;
+	-webkit-transform: rotateY(-270deg) translateX(35px);
+	-webkit-transform-origin: top right
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.three .ball:first-child {
+	top: 9px;
+	left: 9px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.three .ball:nth-child(2) {
+	top: 25px;
+	left: 25px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.three .ball:nth-child(3) {
+	bottom: 9px;
+	right: 9px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.f4 {
+	transform: rotateY(270deg) translateX(-35px);
+	transform-origin: center left;
+	-webkit-transform: rotateY(270deg) translateX(-35px);
+	-webkit-transform-origin: center left
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.four .ball:first-child {
+	top: 12px;
+	left: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.four .ball:nth-child(2) {
+	top: 12px;
+	right: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.four .ball:nth-child(3) {
+	bottom: 12px;
+	left: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.four .ball:nth-child(4) {
+	bottom: 12px;
+	right: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.f5 {
+	transform: rotateX(90deg) translateY(35px);
+	transform-origin: bottom center;
+	-webkit-transform: rotateX(90deg) translateY(35px);
+	-webkit-transform-origin: bottom center
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.five .ball:first-child {
+	top: 9px;
+	left: 9px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.five .ball:nth-child(2) {
+	top: 9px;
+	right: 9px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.five .ball:nth-child(3) {
+	bottom: 9px;
+	left: 9px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.five .ball:nth-child(4) {
+	bottom: 9px;
+	right: 9px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.five .ball:nth-child(5) {
+	top: 25px;
+	left: 25px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.f6 {
+	transform: translateZ(-35px) rotateY(180deg);
+	-webkit-transform: translateZ(-35px) rotateY(180deg)
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.six .ball:first-child {
+	top: 9px;
+	left: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.six .ball:nth-child(2) {
+	top: 9px;
+	right: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.six .ball:nth-child(3) {
+	bottom: 9px;
+	left: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.six .ball:nth-child(4) {
+	bottom: 9px;
+	right: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.six .ball:nth-child(5) {
+	top: 25px;
+	right: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice .face.six .ball:nth-child(6) {
+	top: 25px;
+	left: 12px;
+	position: absolute
+}
+
+.gameDice .gameContent .dicesBlock .dice {
+	-webkit-animation: dice-movement 3s linear both;
+	animation: dice-movement 3s linear both
+}
+@keyframes dice-movement {
+    0% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(0) rotate(-200deg) rotateY(100deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(0) rotate(-200deg) rotateY(100deg)
+    }
+
+    1% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(3px, 1px) rotate(-190deg) rotateY(95deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(3px, 1px) rotate(-190deg) rotateY(95deg)
+    }
+
+    2% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(6px, 11px) rotate(-180deg) rotateY(90deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(6px, 11px) rotate(-180deg) rotateY(90deg)
+    }
+
+    3% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(9px, 31px) rotate(-170deg) rotateY(85deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(9px, 31px) rotate(-170deg) rotateY(85deg)
+    }
+
+    4% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(11px, 58px) rotate(-160deg) rotateY(80deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(11px, 58px) rotate(-160deg) rotateY(80deg)
+    }
+
+    5% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(14px, 94px) rotate(-150deg) rotateY(75deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(14px, 94px) rotate(-150deg) rotateY(75deg)
+    }
+
+    6% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(17px, 140px) rotate(-140deg) rotateY(70deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(17px, 140px) rotate(-140deg) rotateY(70deg)
+    }
+
+    7% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(20px, 194px) rotate(-130deg) rotateY(65deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(20px, 194px) rotate(-130deg) rotateY(65deg)
+    }
+
+    8% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(23px, 171px) rotate(-120deg) rotateY(60deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(23px, 171px) rotate(-120deg) rotateY(60deg)
+    }
+
+    9% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(25px, 147px) rotate(-110deg) rotateY(55deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(25px, 147px) rotate(-110deg) rotateY(55deg)
+    }
+
+    10% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(28px, 132px) rotate(-100deg) rotateY(50deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(28px, 132px) rotate(-100deg) rotateY(50deg)
+    }
+
+    11% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(30px, 126px) rotate(-90deg) rotateY(45deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(30px, 126px) rotate(-90deg) rotateY(45deg)
+    }
+
+    12% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(33px, 129px) rotate(-80deg) rotateY(40deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(33px, 129px) rotate(-80deg) rotateY(40deg)
+    }
+
+    13% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(35px, 141px) rotate(-70deg) rotateY(35deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(35px, 141px) rotate(-70deg) rotateY(35deg)
+    }
+
+    14% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(37px, 162px) rotate(-60deg) rotateY(30deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(37px, 162px) rotate(-60deg) rotateY(30deg)
+    }
+
+    15% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(40px, 192px) rotate(-50deg) rotateY(25deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(40px, 192px) rotate(-50deg) rotateY(25deg)
+    }
+
+    16% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(42px, 185px) rotate(-40deg) rotateY(20deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(42px, 185px) rotate(-40deg) rotateY(20deg)
+    }
+
+    17% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(44px, 175px) rotate(-30deg) rotateY(15deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(44px, 175px) rotate(-30deg) rotateY(15deg)
+    }
+
+    18% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(46px, 173px) rotate(-20deg) rotateY(10deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(46px, 173px) rotate(-20deg) rotateY(10deg)
+    }
+
+    19% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(48px, 180px) rotate(-10deg) rotateY(5deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(48px, 180px) rotate(-10deg) rotateY(5deg)
+    }
+
+    20% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(50px, 195px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(50px, 195px) rotate(0deg) rotateY(0deg)
+    }
+
+    21% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(51px, 192px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(51px, 192px) rotate(0deg) rotateY(0deg)
+    }
+
+    22% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(53px, 190px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(53px, 190px) rotate(0deg) rotateY(0deg)
+    }
+
+    23% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(54px, 197px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(54px, 197px) rotate(0deg) rotateY(0deg)
+    }
+
+    24% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(56px, 196px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(56px, 196px) rotate(0deg) rotateY(0deg)
+    }
+
+    25% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(57px, 198px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(57px, 198px) rotate(0deg) rotateY(0deg)
+    }
+
+    26% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(58px, 198px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(58px, 198px) rotate(0deg) rotateY(0deg)
+    }
+
+    27% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(59px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(59px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    28% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(59px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(59px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    29% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    30% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    31% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    32% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    33% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    34% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    35% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    36% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    37% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    38% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    39% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    40% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    41% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    42% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    43% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    44% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    45% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    46% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    47% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    48% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    49% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    50% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    51% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    52% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    53% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    54% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    55% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    56% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    57% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    58% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    59% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    60% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    61% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    62% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    63% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    64% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    65% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    66% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    67% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    68% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    69% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    70% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    71% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    72% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    73% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    74% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    75% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    76% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    77% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    78% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    79% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    80% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    81% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    82% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    83% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    84% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    85% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    86% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    87% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    88% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    89% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    90% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    91% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    92% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    93% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    94% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    95% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    96% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    97% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    98% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    99% {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+
+    to {
+        -webkit-transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg);
+        transform: rotateX(-55deg) rotateY(45deg) translate(60px, 199px) rotate(0deg) rotateY(0deg)
+    }
+}
+/**/
+
+
+.gameDice1 .gameContent .dicesBlock {
+    position: relative;
+    min-height: 200px;
+    background: var(--events_card_color_bg);
+    border-radius: var(--radius_button);
+    text-align: center;
+    overflow: hidden
+}
+
+.gameDice1 .gameContent .dicesBlock .waitIcon {
+    margin-top: 55px;
+    display: inline-block;
+    color: white
+}
+
+.gameDice1 .gameContent .dicesBlock .waitText {
+    color: white;
+    font-size: 24px;
+    font-weight: 300
+}
+
+.gameDice1 .gameContent .dicesBlock .timer {
+    padding-top: 60px;
+    color: var(--bw_color_text);
+    font-size: 70px;
+    font-weight: 500
+}
+
+.gameDice1 .gameContent .dicesBlock .resultText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 200px;
+    top: 0;
+    left: 0;
+    background: var(--transparent_chat_color_bg);
+    color: var(--bw_color_text);
+    text-align: center;
+    font-size: 100px;
+    font-weight: 500;
+    opacity: .8;
+    -webkit-animation: show-result-text 2s linear both;
+    animation: show-result-text 2s linear both
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper {
+    -webkit-animation: dice1-wrapper-animation .6s cubic-bezier(0, 0, .02, 1);
+    animation: dice1-wrapper-animation .6s cubic-bezier(0, 0, .02, 1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    position: absolute;
+    display: inline-block;
+    top: 50px;
+    left: 0;
+    right: 0;
+    text-align: center
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius_button);
+    background: #607d8b;
+    -webkit-animation: dice1-animation .6s cubic-bezier(0, 0, .01, 1);
+    animation: dice1-animation .6s cubic-bezier(0, 0, .01, 1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .ball {
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    background: #fff
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.one .ball {
+    top: 40px;
+    right: 40px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.two .ball:first-child {
+    top: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.two .ball:nth-child(2) {
+    bottom: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:first-child {
+    top: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:nth-child(2) {
+    top: 40px;
+    left: 40px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:nth-child(3) {
+    bottom: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:first-child {
+    top: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(2) {
+    top: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(3) {
+    bottom: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(4) {
+    bottom: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:first-child {
+    top: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(2) {
+    top: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(3) {
+    bottom: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(4) {
+    bottom: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(5) {
+    top: 40px;
+    left: 40px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:first-child {
+    top: 9px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(2) {
+    top: 9px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(3) {
+    bottom: 9px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(4) {
+    bottom: 9px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(5) {
+    top: 40px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(6) {
+    top: 40px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice1 .gameContent .dicesBlock .result {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 200px;
+    font-size: 80px;
+    font-weight: 200;
+    -webkit-animation: dice1-result .5s ease-in-out;
+    animation: dice1-result .5s ease-in-out;
+    -webkit-transform: translate(60px);
+    transform: translate(60px);
+    z-index: 0
+}
+
+.gameDice1 .gameContent .dicesBlock.publish .diceWrapper {
+    transition: all .5s ease-in-out;
+    -webkit-transform: translate(-60px);
+    transform: translate(-60px);
+    z-index: 2
+}
+
+.gameDice1 .gameContent .betResults {
+    background: var(--events_card_color_bg);
+    border-radius: var(--radius_button);
+    padding: 10px
+}
+
+.gameDice1 .gameContent .betResults .text {
+    display: inline-block;
+    opacity: .6;
+    font-weight: 400
+}
+
+.gameDice1 .gameContent .betResults .num {
+    font-weight: 300;
+    margin-left: 5px;
+    display: inline-block
+}
+
+.gameDice1 .gameContent .betResults .result {
+    font-weight: 300
+}
+
+.gameDice1 .gameContent .betResults .result.plus .num {
+    color: #66bb6a
+}
+.gameDice1 .gameContent .itemWrapper {
+    display: inline-block;
+    margin-left: 10px;
+    background: var(--events_card_color_bg);
+    border-radius: var(--radius_button);
+	justify-content: center;
+	align-items: center;
+}
+
+.gameDice1 .gameContent .itemWrapper .item {
+    border-radius: 12px;
+    background: #4caf50;
+    width: 70px
+}
+
+.gameDice1 .gameContent .itemWrapper .item.type-notodd {
+    background: #607d8b;
+	font-size: 21px;
+	font-weight: 600;
+}
+
+.gameDice1 .gameContent .itemWrapper .item.type-odd {
+    background: #2196f3;
+}
+
+.gameDice1 .gameContent .itemWrapper .item div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 52px;
+    vertical-align: middle;
+    color: #fff;
+	font-size: 18px;
+	font-weight: 200;
+}
+
+.gameDice1 .gameContent .itemWrapper .bet {
+    margin: 4px 0 2px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: white
+}
+
+.gameDice1 .gameContent .itemWrapper.win .bet {
+    color: #66bb6a
+}
+
+.gameDice1 .gameContent .itemWrapper.lose .bet {
+    color: #ef5350
+}
+
+.gameDice1 .gameContent .betResults .result.minus .num {
+    color: #ef5350
+}
+
+.gameDice1 .gameContent .balanceBlock {
+    background: var(--events_card_color_bg);
+    border-radius: var(--radius_button);
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center
+}
+
+.gameDice1 .gameContent .balanceBlock .chipsIcon {
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px
+}
+
+.gameDice1 .gameContent .Header {
+    padding: 0 0 0 10px;
+    margin: 0
+}
+
+.gameDice1 .gameContent .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+
+.gameDice1 .gameContent .HorizontalScroll__in {
+    white-space: nowrap !important;
+    padding-right: 10px
+}
+
+.gameDice1 .gameContent .history {
+    background: var(--events_card_color_bg);
+    border-radius: var(--radius_button);
+    margin: 10px 0;
+    padding: 10px
+}
+
+.gameDice1 .gameContent .history .HorizontalScroll__in {
+    white-space: nowrap !important
+}
+
+.gameDice1 .gameContent .history .Header,
+.gameDice1 .gameContent .history .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+.gameDice1 .gameContent .history {
+    padding-top: 8px
+}
+
+.gameDice1 .gameContent .history .item {
+    display: inline-block;
+    border-radius: var(--radius_button);
+    margin-right: 8px;
+    background: #00bcd4;
+    width: 42px;
+    height: 42px
+}
+
+.gameDice1 .gameContent .history .item.type-odd {
+    background: #607d8b
+}
+
+.gameDice1 .gameContent .history .item.type-even {
+    background: #2196f3
+}
+
+.gameDice1 .gameContent .history .item div {
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+    text-align: center;
+    line-height: 42px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff
+}
+
+.gameDice1 .gameContent .buttonsBlock {
+    margin: 10px 0
+}
+
+.gameDice1 .gameContent .buttonsBlock .Button {
+    margin-top: 10px
+}
+
+.gameDice1 .gameContent .buttonsBlock .winStatus,
+.gameDice1 .gameContent .buttonsBlock .winStatusDef {
+    position: relative
+}
+
+.gameDice1 .gameContent .buttonsBlock .winStatus .vkIcon,
+.gameDice1 .gameContent .buttonsBlock .winStatusDef .vkIcon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px
+}
+
+.gameDice1 .gameContent .buttonsBlock .winStatus .myBetType,
+.gameDice1 .gameContent .buttonsBlock .winStatusDef .myBetType {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 11px);
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 22px;
+    vertical-align: middle
+}
+
+.gameDice1 .gameContent .buttonsBlock .form {
+    padding: 0 var(--padding_left_vk)
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .betButtonsInp {
+    margin: 10px 0;
+    padding: 0
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .betButtonsInp .betButton {
+    display: inline-block;
+    width: calc(25% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: #fff;
+    border-radius: var(--radius_button);
+    padding: 8px 0;
+    text-align: center
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .betButtonsInp .b1 {
+    width: calc(25% - 3px);
+    margin-left: 0;
+    background: #ffc107
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .betButtonsInp .b2 {
+    background: #8bc34a
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .betButtonsInp .b3 {
+    background: #03a9f4
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .betButtonsInp .b4 {
+    width: calc(25% - 3px);
+    margin-right: 0;
+    background: #e91e63
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .inputBetWrapper {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .inputBetWrapper .form {
+    padding: 0
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper {
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    top: 4.5px;
+    right: 4px;
+    z-index: 2
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper .mb {
+    width: 20px;
+    text-align: center;
+    padding: 8px 15px;
+    background: var(--events_card_color_bg);
+    margin: 0 2px;
+    border-radius: var(--radius_button);
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .1s linear
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper .mb:active {
+    opacity: .7
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .Input {
+    border-radius: var(--radius_button);
+    margin: 0
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .Input .FormField__border {
+    border-radius: 12px
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper {
+    padding: 10px 0;
+    background: var(--events_card_color_bg);
+    border-radius: 12px
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .Header {
+    padding: 0;
+    margin: 0 0 0 10px
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons {
+    margin: 10px 0 0;
+    padding: 0 10px
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton {
+    display: inline-block;
+    position: relative;
+    width: calc(33.33333% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: #fff;
+    border-radius: 14px;
+    padding: 12px 0;
+    text-align: center;
+    font-weight: 600;
+    background: var(--events_card_color_bg);
+    transition: all .1s linear
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton .coef {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: hsla(0, 0%, 100%, .7)
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton:active {
+    background: var(--events_card_color_bg);
+    color: white
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .even {
+    width: calc(50% - 3px);
+    margin-left: 0;
+    background: #2196f3
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .odd {
+    width: calc(50% - 3px);
+    margin-right: 0;
+    background: #607d8b
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num {
+    background: #4caf50
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n1,
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n4 {
+    margin-left: 0;
+    width: calc(33.33333% - 3px)
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n3,
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n6 {
+    margin-right: 0;
+    width: calc(33.33333% - 3px)
+}
+
+.gameDice1 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betSum {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: 300;
+    font-size: 12px
+}
+
+.gameDice1 .gameContent .buttonsBlock .targetButtons {
+    margin: 10px 0;
+    padding: 0 var(--padding_left_vk)
+}
+
+.gameDice1 .gameContent .buttonsBlock .targetButtons .button {
+    display: inline-block;
+    width: calc(33.33333% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: hsla(0, 0%, 100%, .7);
+    border-radius: var(--radius_button);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    background: var(--events_card_color_bg)
+}
+
+.gameDice1 .gameContent .buttonsBlock .targetButtons .button.a {
+    background: #3f51b5
+}
+
+.gameDice1 .gameContent .buttonsBlock .targetButtons b {
+    color: #fff
+}
+
+.gameDice1 .gameContent .buttonsBlock .targetButtons .b1 {
+    width: calc(33.33333% - 3px);
+    margin-left: 0
+}
+
+.gameDice1 .gameContent .buttonsBlock .targetButtons .b2.a {
+    background: #4caf50
+}
+
+.gameDice1 .gameContent .buttonsBlock .targetButtons .b3 {
+    width: calc(33.33333% - 3px);
+    margin-right: 0
+}
+
+.gameDice1 .gameContent .betCell .Cell__description {
+    white-space: pre-line
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
+    background: var(--events_card_color_bg);
+    border-radius: 12px
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper .item {
+    border-radius: var(--radius_button);
+    background: #4caf50;
+    width: 50px
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper .item.type-odd {
+    background: #607d8b
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper .item.type-even {
+    background: #2196f3
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper .item div {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper .bet {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper .bet .vkIcon {
+    display: inline-block;
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper.win .bet {
+    color: #66bb6a
+}
+
+.gameDice1 .gameContent .betCell .usersListBets .itemWrapper.lose .bet {
+    color: #ef5350
+}
+
+.gameDice1 .gameContent .FormLayout__row {
+    padding: 0
+}
+@keyframes dice1-wrapper-animation {
+    0% {
+        -webkit-transform: translate(-83.33333vw, -70px);
+        transform: translate(-83.33333vw, -70px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+@keyframes dice1-result {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    to {
+        -webkit-transform: translate(60px);
+        transform: translate(60px)
+    }
+}
+@keyframes dice1-animation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(3turn);
+        transform: rotate(3turn)
+    }
+}
+
+/**/
+
+
+
+.gameDice2 .gameContent .dicesBlock {
+    position: relative;
+    min-height: 200px;
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden
+}
+
+.gameDice2 .gameContent .dicesBlock .waitIcon {
+    margin-top: 55px;
+    display: inline-block;
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice2 .gameContent .dicesBlock .waitText {
+    color: var(--bw_color_text_lite);
+    font-size: 27px;
+    font-weight: 300
+}
+
+.gameDice2 .gameContent .dicesBlock .timer {
+    padding-top: 60px;
+    color: var(--bw_color_text);
+    font-size: 70px;
+    font-weight: 500
+}
+
+.gameDice2 .gameContent .dicesBlock .resultText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 200px;
+    top: 0;
+    left: 0;
+    background: var(--transparent_chat_color_bg);
+    color: var(--bw_color_text);
+    text-align: center;
+    font-size: 100px;
+    font-weight: 500;
+    opacity: .8;
+    -webkit-animation: show-result-text 2s linear both;
+    animation: show-result-text 2s linear both
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper {
+    display: inline-block;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 50px 0;
+    border-radius: 12px;
+    background: #607d8b;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .ball {
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    background: #fff
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.one .ball {
+    top: 40px;
+    right: 40px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.two .ball:first-child {
+    top: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.two .ball:nth-child(2) {
+    bottom: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:first-child {
+    top: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:nth-child(2) {
+    top: 40px;
+    left: 40px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:nth-child(3) {
+    bottom: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:first-child {
+    top: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(2) {
+    top: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(3) {
+    bottom: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(4) {
+    bottom: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:first-child {
+    top: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(2) {
+    top: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(3) {
+    bottom: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(4) {
+    bottom: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(5) {
+    top: 40px;
+    left: 40px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:first-child {
+    top: 9px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(2) {
+    top: 9px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(3) {
+    bottom: 9px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(4) {
+    bottom: 9px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(5) {
+    top: 40px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(6) {
+    top: 40px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper.n1 {
+    -webkit-animation: dice2-wrapper-animation1 .6s cubic-bezier(0, 0, .02, 1);
+    animation: dice2-wrapper-animation1 .6s cubic-bezier(0, 0, .02, 1);
+    margin-right: 10px
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper.n1 .dice {
+    -webkit-animation: dice2-animation1 .6s cubic-bezier(0, 0, .01, 1);
+    animation: dice2-animation1 .6s cubic-bezier(0, 0, .01, 1)
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper.n2 {
+    -webkit-animation: dice2-wrapper-animation2 .6s cubic-bezier(0, 0, .02, 1);
+    animation: dice2-wrapper-animation2 .6s cubic-bezier(0, 0, .02, 1);
+    margin-left: 10px
+}
+
+.gameDice2 .gameContent .dicesBlock .diceWrapper.n2 .dice {
+    -webkit-animation: dice2-animation2 .6s cubic-bezier(0, 0, .01, 1);
+    animation: dice2-animation2 .6s cubic-bezier(0, 0, .01, 1)
+}
+
+.gameDice2 .gameContent .dicesBlock .result {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 200px;
+    font-size: 60px;
+    font-weight: 200;
+    -webkit-animation: dice2-result .5s ease-in-out;
+    animation: dice2-result .5s ease-in-out
+}
+
+.gameDice2 .gameContent .dicesBlock.publish .diceWrapper {
+    transition: all .5s ease-in-out
+}
+
+.gameDice2 .gameContent .dicesBlock.publish .diceWrapper.n1 {
+    -webkit-transform: scale(.7) translate(-40px);
+    transform: scale(.7) translate(-40px)
+}
+
+.gameDice2 .gameContent .dicesBlock.publish .diceWrapper.n2 {
+    -webkit-transform: scale(.7) translate(40px);
+    transform: scale(.7) translate(40px)
+}
+
+.gameDice2 .gameContent .betResults {
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    padding: 10px
+}
+
+.gameDice2 .gameContent .betResults .text {
+    display: inline-block;
+    opacity: .6;
+    font-weight: 400
+}
+
+.gameDice2 .gameContent .betResults .num {
+    font-weight: 300;
+    margin-left: 5px;
+    display: inline-block
+}
+
+.gameDice2 .gameContent .betResults .result {
+    font-weight: 300
+}
+
+.gameDice2 .gameContent .betResults .result.plus .num {
+    color: #66bb6a
+}
+
+.gameDice2 .gameContent .betResults .result.minus .num {
+    color: #ef5350
+}
+
+.gameDice2 .gameContent .balanceBlock {
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center
+}
+
+.gameDice2 .gameContent .balanceBlock .chipsIcon {
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px
+}
+
+.gameDice2 .gameContent .myBets {
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 10px 0
+}
+
+.gameDice2 .gameContent .myBets .Header {
+    padding: 0 0 0 10px;
+    margin: 0
+}
+
+.gameDice2 .gameContent .myBets .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+.gameDice2 .gameContent {
+    padding-top: 8px
+}
+
+.gameDice2 .gameContent .HorizontalScroll__in {
+    white-space: nowrap !important;
+    padding-right: 10px
+}
+
+.gameDice2 .gameContent .itemWrapper {
+    display: inline-block;
+    margin-left: 10px;
+    background: var(--events_card_color_bg);
+    border-radius: 12px
+}
+
+.gameDice2 .gameContent .itemWrapper .item {
+    border-radius: 12px;
+    background: #4caf50;
+    width: 70px
+}
+
+.gameDice2 .gameContent .itemWrapper .item.type-notodd {
+    background: #607d8b
+}
+
+.gameDice2 .gameContent .itemWrapper .item.type-odd {
+    background: #2196f3
+}
+
+.gameDice2 .gameContent .itemWrapper .item.type-d1,
+.gameDice2 .gameContent .itemWrapper .item.type-d2,
+.gameDice2 .gameContent .itemWrapper .item.type-d3,
+.gameDice2 .gameContent .itemWrapper .item.type-d4,
+.gameDice2 .gameContent .itemWrapper .item.type-d5,
+.gameDice2 .gameContent .itemWrapper .item.type-d6 {
+    background: #ff9800
+}
+
+.gameDice2 .gameContent .itemWrapper .item div {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 52px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff
+}
+
+.gameDice2 .gameContent .itemWrapper .bet {
+    margin: 4px 0 2px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice2 .gameContent .itemWrapper.win .bet {
+    color: #66bb6a
+}
+
+.gameDice2 .gameContent .itemWrapper.lose .bet {
+    color: #ef5350
+}
+
+.gameDice2 .gameContent .history {
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 10px
+}
+
+.gameDice2 .gameContent .history .HorizontalScroll__in {
+    white-space: nowrap !important
+}
+
+.gameDice2 .gameContent .history .Header,
+.gameDice2 .gameContent .history .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+.gameDice2 .gameContent .history .wrapper {
+    padding-top: 8px
+}
+
+.gameDice2 .gameContent .history .wrapper .item {
+    display: inline-block;
+    border-radius: 12px;
+    margin-right: 8px;
+    background: #00bcd4;
+    width: 42px;
+    height: 42px
+}
+
+.gameDice2 .gameContent .history .wrapper .item.type-odd {
+    background: #607d8b
+}
+
+.gameDice2 .gameContent .history .wrapper .item.type-even {
+    background: #2196f3
+}
+
+.gameDice2 .gameContent .history .wrapper .item div {
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+    text-align: center;
+    line-height: 42px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff
+}
+
+.gameDice2 .gameContent .buttonsBlock {
+    margin: 10px 0
+}
+
+.gameDice2 .gameContent .buttonsBlock .Button {
+    margin-top: 10px
+}
+
+.gameDice2 .gameContent .buttonsBlock .winStatus,
+.gameDice2 .gameContent .buttonsBlock .winStatusDef {
+    position: relative
+}
+
+.gameDice2 .gameContent .buttonsBlock .winStatus .vkIcon,
+.gameDice2 .gameContent .buttonsBlock .winStatusDef .vkIcon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px
+}
+
+.gameDice2 .gameContent .buttonsBlock .winStatus .myBetType,
+.gameDice2 .gameContent .buttonsBlock .winStatusDef .myBetType {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 11px);
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 22px;
+    vertical-align: middle
+}
+
+.gameDice2 .gameContent .buttonsBlock .form {
+    padding: 0 var(--padding_left_vk)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .betButtonsInp {
+    margin: 10px 0;
+    padding: 0
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .betButtonsInp .betButton {
+    display: inline-block;
+    width: calc(25% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: #fff;
+    border-radius: 12px;
+    padding: 8px 0;
+    text-align: center
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .betButtonsInp .b1 {
+    width: calc(25% - 3px);
+    margin-left: 0;
+    background: #ffc107
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .betButtonsInp .b2 {
+    background: #8bc34a
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .betButtonsInp .b3 {
+    background: #03a9f4
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .betButtonsInp .b4 {
+    width: calc(25% - 3px);
+    margin-right: 0;
+    background: #e91e63
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .inputBetWrapper {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .inputBetWrapper .form {
+    padding: 0
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper {
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    top: 4.5px;
+    right: 4px;
+    z-index: 2
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper .mb {
+    width: 20px;
+    text-align: center;
+    padding: 8px 15px;
+    background: var(--events_card_color_bg);
+    margin: 0 2px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .1s linear
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper .mb:active {
+    opacity: .7
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .Input {
+    border-radius: 12px;
+    margin: 0
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .Input .FormField__border {
+    border-radius: 12px
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper {
+    padding: 10px 0;
+    background: var(--events_card_color_bg);
+    border-radius: 12px
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .Header {
+    padding: 0;
+    margin: 0 0 0 10px
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons {
+    margin: 10px 0 0;
+    padding: 0 10px
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton {
+    display: inline-block;
+    position: relative;
+    width: calc(25% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: #fff;
+    border-radius: 14px;
+    padding: 12px 0;
+    text-align: center;
+    font-weight: 600;
+    background: var(--events_card_color_bg);
+    transition: all .1s linear
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton .coef {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: hsla(0, 0%, 100%, .7)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton:active {
+    background: var(--events_card_color_bg);
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .even {
+    width: calc(50% - 3px);
+    margin-left: 0;
+    background: #2196f3
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .odd {
+    width: calc(50% - 3px);
+    margin-right: 0;
+    background: #607d8b
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num {
+    background: #4caf50
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n2,
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n6 {
+    margin-left: 0;
+    width: calc(25% - 3px)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n5,
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n9 {
+    margin-right: 0;
+    width: calc(25% - 3px)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n10 {
+    margin-left: 0;
+    width: calc(33.33333% - 3px)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n11 {
+    width: calc(33.33333% - 6px)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n12 {
+    margin-right: 0;
+    width: calc(33.33333% - 3px)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d {
+    width: calc(33.33333% - 6px);
+    background: #ff9800
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d.d1,
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d.d4 {
+    margin-left: 0;
+    width: calc(33.33333% - 3px)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d.n3,
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d.n6 {
+    margin-right: 0;
+    width: calc(33.33333% - 3px)
+}
+
+.gameDice2 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betSum {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-weight: 300;
+    font-size: 10px
+}
+
+.gameDice2 .gameContent .buttonsBlock .targetButtons {
+    margin: 10px 0;
+    padding: 0 var(--padding_left_vk)
+}
+
+.gameDice2 .gameContent .buttonsBlock .targetButtons .button {
+    display: inline-block;
+    width: calc(33.33333% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: hsla(0, 0%, 100%, .7);
+    border-radius: 12px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    background: var(--events_card_color_bg)
+}
+
+.gameDice2 .gameContent .buttonsBlock .targetButtons .button.a {
+    background: #3f51b5
+}
+
+.gameDice2 .gameContent .buttonsBlock .targetButtons b {
+    color: #fff
+}
+
+.gameDice2 .gameContent .buttonsBlock .targetButtons .b1 {
+    width: calc(33.33333% - 3px);
+    margin-left: 0
+}
+
+.gameDice2 .gameContent .buttonsBlock .targetButtons .b2.a {
+    background: #4caf50
+}
+
+.gameDice2 .gameContent .buttonsBlock .targetButtons .b3 {
+    width: calc(33.33333% - 3px);
+    margin-right: 0
+}
+
+.gameDice2 .gameContent .betCell .Cell__description {
+    white-space: pre-line
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
+    background: var(--events_card_color_bg);
+    border-radius: 12px
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item {
+    border-radius: 12px;
+    background: #4caf50;
+    width: 50px
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item.type-odd {
+    background: #607d8b
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item.type-even {
+    background: #2196f3
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item.type-d1,
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item.type-d2,
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item.type-d3,
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item.type-d4,
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item.type-d5,
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item.type-d6 {
+    background: #ff9800
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .item div {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .bet {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper .bet .vkIcon {
+    display: inline-block;
+    margin-right: 1px;
+    vertical-align: middle
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper.win .bet {
+    color: #66bb6a
+}
+
+.gameDice2 .gameContent .betCell .usersListBets .itemWrapper.lose .bet {
+    color: #ef5350
+}
+
+.gameDice2 .gameContent .FormLayout__row {
+    padding: 0
+}
+
+.gameDice2 .modalBet {
+    padding-bottom: 15px
+}
+
+.gameDice2 .modalBet .curBet {
+    margin-bottom: 20px;
+    margin-top: 5px
+}
+
+.gameDice2 .modalBet .curBet .chipsIcon {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    vertical-align: middle
+}
+
+.gameDice2 .modalBet .selectBetChip {
+    padding: 0 0 0 var(--padding_left_vk);
+    margin-bottom: 15px
+}
+
+.gameDice2 .modalBet .selectBetChip .chip {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    text-align: center;
+    background: var(--events_card_color_bg);
+    border-radius: 14px;
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice2 .modalBet .selectBetChip .chip.selected {
+    background: #ff9800;
+    color: #fff
+}
+
+.gameDice2 .modalBet .selectBetChip .chip.disabled {
+    opacity: .5
+}
+
+.gameDice2 .modalBet .Input {
+    margin-top: 15px;
+    border-radius: 14px
+}
+
+.gameDice2 .modalBet .Input .FormField__border {
+    border-radius: 14px
+}
+
+.gameDice2 .modalBet .Button {
+    margin-top: 15px;
+    border-radius: 14px
+}
+
+.gameDice2 .FormLayout__row {
+    padding: 0
+}
+
+.gameDice2 .modal.selectNumber {
+    padding: 0 var(--padding_left_vk);
+    text-align: center
+}
+
+.gameDice2 .modal.selectNumber .number {
+    display: inline-block;
+    width: calc(25% - 6px);
+    margin: 0 3px 8px;
+    padding: 8px 0;
+    text-align: center;
+    background: #101010;
+    color: #fff;
+    border-radius: 12px
+}
+
+.gameDice2 .modal.selectNumber .number.c1 {
+    background: #f44336
+}
+
+@-webkit-keyframes dice2-result {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes dice2-result {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+/**/
+
+
+.gameDice3 .gameContent .dicesBlock {
+    position: relative;
+    min-height: 220px;
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden
+}
+
+.gameDice3 .gameContent .dicesBlock .waitIcon {
+    margin-top: 65px;
+    display: inline-block;
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice3 .gameContent .dicesBlock .waitText {
+    color: var(--bw_color_text_lite);
+    font-size: 27px;
+    font-weight: 300
+}
+
+.gameDice3 .gameContent .dicesBlock .timer {
+    padding-top: 70px;
+    color: var(--bw_color_text);
+    font-size: 70px;
+    font-weight: 500
+}
+
+.gameDice3 .gameContent .dicesBlock .resultText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 200px;
+    top: 0;
+    left: 0;
+    background: var(--transparent_chat_color_bg);
+    color: var(--bw_color_text);
+    text-align: center;
+    font-size: 100px;
+    font-weight: 500;
+    opacity: .8;
+    -webkit-animation: show-result-text 2s linear both;
+    animation: show-result-text 2s linear both
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper {
+    display: inline-block;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 12px;
+    background: #607d8b;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .ball {
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+    border-radius: 50%;
+    background: #fff
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.one .ball {
+    top: 40px;
+    right: 40px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.two .ball:first-child {
+    top: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.two .ball:nth-child(2) {
+    bottom: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:first-child {
+    top: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:nth-child(2) {
+    top: 40px;
+    left: 40px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.three .ball:nth-child(3) {
+    bottom: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:first-child {
+    top: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(2) {
+    top: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(3) {
+    bottom: 12px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.four .ball:nth-child(4) {
+    bottom: 12px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:first-child {
+    top: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(2) {
+    top: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(3) {
+    bottom: 9px;
+    left: 9px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(4) {
+    bottom: 9px;
+    right: 9px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.five .ball:nth-child(5) {
+    top: 40px;
+    left: 40px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:first-child {
+    top: 9px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(2) {
+    top: 9px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(3) {
+    bottom: 9px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(4) {
+    bottom: 9px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(5) {
+    top: 40px;
+    right: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper .dice .face.six .ball:nth-child(6) {
+    top: 40px;
+    left: 12px;
+    position: absolute
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper.n1 {
+    -webkit-animation: dice2-wrapper-animation1 .6s cubic-bezier(0, 0, .02, 1);
+    animation: dice2-wrapper-animation1 .6s cubic-bezier(0, 0, .02, 1);
+    margin-right: 10px
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper.n1 .dice {
+    margin-top: 20px;
+    -webkit-animation: dice2-animation1 .6s cubic-bezier(0, 0, .01, 1);
+    animation: dice2-animation1 .6s cubic-bezier(0, 0, .01, 1)
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper.n2 {
+    -webkit-animation: dice2-wrapper-animation2 .6s cubic-bezier(0, 0, .02, 1);
+    animation: dice2-wrapper-animation2 .6s cubic-bezier(0, 0, .02, 1);
+    margin-left: 10px
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper.n2 .dice {
+    margin-top: 20px;
+    -webkit-animation: dice2-animation2 .6s cubic-bezier(0, 0, .01, 1);
+    animation: dice2-animation2 .6s cubic-bezier(0, 0, .01, 1)
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper.n3 {
+    margin-top: 10px;
+    -webkit-animation: dice2-wrapper-animation2 .6s cubic-bezier(0, 0, .02, 1);
+    animation: dice2-wrapper-animation2 .6s cubic-bezier(0, 0, .02, 1)
+}
+
+.gameDice3 .gameContent .dicesBlock .diceWrapper.n3 .dice {
+    margin-bottom: 15px;
+    -webkit-animation: dice2-animation2 .6s cubic-bezier(0, 0, .01, 1);
+    animation: dice2-animation2 .6s cubic-bezier(0, 0, .01, 1)
+}
+
+.gameDice3 .gameContent .dicesBlock .result {
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 60px;
+    font-weight: 200;
+    -webkit-animation: dice3-result .5s ease-in-out;
+    animation: dice3-result .5s ease-in-out;
+    -webkit-transform: translate(60px);
+    transform: translate(60px);
+    z-index: 0
+}
+
+.gameDice3 .gameContent .dicesBlock.publish .diceWrapper {
+    transition: all .5s ease-in-out
+}
+
+.gameDice3 .gameContent .dicesBlock.publish .diceWrapper.n3 {
+    -webkit-transform: translate(-60px);
+    transform: translate(-60px);
+    z-index: 3
+}
+
+.gameDice3 .gameContent .betResults {
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    padding: 10px
+}
+
+.gameDice3 .gameContent .betResults .text {
+    display: inline-block;
+    opacity: .6;
+    font-weight: 400
+}
+
+.gameDice3 .gameContent .betResults .num {
+    font-weight: 300;
+    margin-left: 5px;
+    display: inline-block
+}
+
+.gameDice3 .gameContent .betResults .result {
+    font-weight: 300
+}
+
+.gameDice3 .gameContent .betResults .result.plus .num {
+    color: #66bb6a
+}
+
+.gameDice3 .gameContent .betResults .result.minus .num {
+    color: #ef5350
+}
+
+.gameDice3 .gameContent .balanceBlock {
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center
+}
+
+.gameDice3 .gameContent .balanceBlock .chipsIcon {
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px
+}
+
+.gameDice3 .gameContent .myBets {
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 10px 0
+}
+
+.gameDice3 .gameContent .myBets .Header {
+    padding: 0 0 0 10px;
+    margin: 0
+}
+
+.gameDice3 .gameContent .myBets .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+.gameDice3 .gameContent {
+    padding-top: 8px
+}
+
+.gameDice3 .gameContent .HorizontalScroll__in {
+    white-space: nowrap !important;
+    padding-right: 10px
+}
+
+.gameDice3 .gameContent .itemWrapper {
+    display: inline-block;
+    margin-left: 10px;
+    background: var(--events_card_color_bg);
+    border-radius: 12px
+}
+
+.gameDice3 .gameContent .itemWrapper .item {
+    border-radius: 12px;
+    background: #4caf50;
+    width: 70px
+}
+
+.gameDice3 .gameContent .itemWrapper .item.type-odd {
+    background: #607d8b
+}
+
+.gameDice3 .gameContent .itemWrapper .item.type-even {
+    background: #2196f3
+}
+
+.gameDice3 .gameContent .itemWrapper .item.type-d1,
+.gameDice3 .gameContent .itemWrapper .item.type-d2,
+.gameDice3 .gameContent .itemWrapper .item.type-d3,
+.gameDice3 .gameContent .itemWrapper .item.type-d4,
+.gameDice3 .gameContent .itemWrapper .item.type-d5,
+.gameDice3 .gameContent .itemWrapper .item.type-d6 {
+    background: #ff9800
+}
+
+.gameDice3 .gameContent .itemWrapper .item div {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 52px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff
+}
+
+.gameDice3 .gameContent .itemWrapper .bet {
+    margin: 4px 0 2px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice3 .gameContent .itemWrapper.win .bet {
+    color: #66bb6a
+}
+
+.gameDice3 .gameContent .itemWrapper.lose .bet {
+    color: #ef5350
+}
+
+.gameDice3 .gameContent .history {
+    background: var(--events_card_color_bg);
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 10px
+}
+
+.gameDice3 .gameContent .history .HorizontalScroll__in {
+    white-space: nowrap !important
+}
+
+.gameDice3 .gameContent .history .Header,
+.gameDice3 .gameContent .history .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+.gameDice3 .gameContent .history .wrapper {
+    padding-top: 8px
+}
+
+.gameDice3 .gameContent .history .wrapper .item {
+    display: inline-block;
+    border-radius: 12px;
+    margin-right: 8px;
+    background: #00bcd4;
+    width: 42px;
+    height: 42px
+}
+
+.gameDice3 .gameContent .history .wrapper .item.type-odd {
+    background: #607d8b
+}
+
+.gameDice3 .gameContent .history .wrapper .item.type-even {
+    background: #2196f3
+}
+
+.gameDice3 .gameContent .history .wrapper .item div {
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+    text-align: center;
+    line-height: 42px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff
+}
+
+.gameDice3 .gameContent .buttonsBlock {
+    margin: 10px 0
+}
+
+.gameDice3 .gameContent .buttonsBlock .Button {
+    margin-top: 10px
+}
+
+.gameDice3 .gameContent .buttonsBlock .winStatus,
+.gameDice3 .gameContent .buttonsBlock .winStatusDef {
+    position: relative
+}
+
+.gameDice3 .gameContent .buttonsBlock .winStatus .vkIcon,
+.gameDice3 .gameContent .buttonsBlock .winStatusDef .vkIcon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px
+}
+
+.gameDice3 .gameContent .buttonsBlock .winStatus .myBetType,
+.gameDice3 .gameContent .buttonsBlock .winStatusDef .myBetType {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 11px);
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 22px;
+    vertical-align: middle
+}
+
+.gameDice3 .gameContent .buttonsBlock .form {
+    padding: 0 var(--padding_left_vk)
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .betButtonsInp {
+    margin: 10px 0;
+    padding: 0
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .betButtonsInp .betButton {
+    display: inline-block;
+    width: calc(25% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: #fff;
+    border-radius: 12px;
+    padding: 8px 0;
+    text-align: center
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .betButtonsInp .b1 {
+    width: calc(25% - 3px);
+    margin-left: 0;
+    background: #ffc107
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .betButtonsInp .b2 {
+    background: #8bc34a
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .betButtonsInp .b3 {
+    background: #03a9f4
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .betButtonsInp .b4 {
+    width: calc(25% - 3px);
+    margin-right: 0;
+    background: #e91e63
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .inputBetWrapper {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .inputBetWrapper .form {
+    padding: 0
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper {
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    top: 4.5px;
+    right: 4px;
+    z-index: 2
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper .mb {
+    width: 20px;
+    text-align: center;
+    padding: 8px 15px;
+    background: var(--events_card_color_bg);
+    margin: 0 2px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .1s linear
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .inputBetWrapper .mbWrapper .mb:active {
+    opacity: .7
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .Input {
+    border-radius: 12px;
+    margin: 0
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .Input .FormField__border {
+    border-radius: 12px
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper {
+    padding: 10px 0;
+    background: var(--events_card_color_bg);
+    border-radius: 12px
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .Header {
+    padding: 0;
+    margin: 0 0 0 10px
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .Header .Header__content {
+    padding: 0;
+    margin: 0
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons {
+    margin: 10px 0 0;
+    padding: 0 10px
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton {
+    display: inline-block;
+    position: relative;
+    width: calc(25% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: #fff;
+    border-radius: 14px;
+    padding: 12px 0;
+    text-align: center;
+    font-weight: 600;
+    background: var(--events_card_color_bg);
+    transition: all .1s linear
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton .coef {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: hsla(0, 0%, 100%, .7)
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betButton:active {
+    background: var(--events_card_color_bg);
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .even {
+    width: calc(50% - 3px);
+    margin-left: 0;
+    background: #2196f3
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .odd {
+    width: calc(50% - 3px);
+    margin-right: 0;
+    background: #607d8b
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num {
+    background: #4caf50
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n3,
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n7,
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n11,
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n15 {
+    margin-left: 0;
+    width: calc(25% - 3px)
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n6,
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n10,
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n14,
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .num.n18 {
+    margin-right: 0;
+    width: calc(25% - 3px)
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d {
+    width: calc(33.33333% - 6px);
+    background: #ff9800
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d.d1,
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d.d4 {
+    margin-left: 0;
+    width: calc(33.33333% - 3px)
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d.n3,
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .d.n6 {
+    margin-right: 0;
+    width: calc(33.33333% - 3px)
+}
+
+.gameDice3 .gameContent .buttonsBlock .form .buttonsWrapper .betButtons .betSum {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-weight: 300;
+    font-size: 10px
+}
+
+.gameDice3 .gameContent .buttonsBlock .targetButtons {
+    margin: 10px 0;
+    padding: 0 var(--padding_left_vk)
+}
+
+.gameDice3 .gameContent .buttonsBlock .targetButtons .button {
+    display: inline-block;
+    width: calc(33.33333% - 6px);
+    border: 0;
+    margin: 0 3px;
+    color: hsla(0, 0%, 100%, .7);
+    border-radius: 12px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    background: var(--events_card_color_bg)
+}
+
+.gameDice3 .gameContent .buttonsBlock .targetButtons .button.a {
+    background: #3f51b5
+}
+
+.gameDice3 .gameContent .buttonsBlock .targetButtons b {
+    color: #fff
+}
+
+.gameDice3 .gameContent .buttonsBlock .targetButtons .b1 {
+    width: calc(33.33333% - 3px);
+    margin-left: 0
+}
+
+.gameDice3 .gameContent .buttonsBlock .targetButtons .b2.a {
+    background: #4caf50
+}
+
+.gameDice3 .gameContent .buttonsBlock .targetButtons .b3 {
+    width: calc(33.33333% - 3px);
+    margin-right: 0
+}
+
+.gameDice3 .gameContent .betCell .Cell__description {
+    white-space: pre-line
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
+    background: var(--events_card_color_bg);
+    border-radius: 12px
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item {
+    border-radius: 12px;
+    background: #4caf50;
+    width: 50px
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item.type-odd {
+    background: #607d8b
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item.type-even {
+    background: #2196f3
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item.type-d1,
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item.type-d2,
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item.type-d3,
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item.type-d4,
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item.type-d5,
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item.type-d6 {
+    background: #ff9800
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .item div {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .bet {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper .bet .vkIcon {
+    display: inline-block;
+    margin-right: 1px;
+    vertical-align: middle
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper.win .bet {
+    color: #66bb6a
+}
+
+.gameDice3 .gameContent .betCell .usersListBets .itemWrapper.lose .bet {
+    color: #ef5350
+}
+
+.gameDice3 .gameContent .FormLayout__row {
+    padding: 0
+}
+
+.gameDice3 .modalBet {
+    padding-bottom: 15px
+}
+
+.gameDice3 .modalBet .curBet {
+    margin-bottom: 20px;
+    margin-top: 5px
+}
+
+.gameDice3 .modalBet .curBet .chipsIcon {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    vertical-align: middle
+}
+
+.gameDice3 .modalBet .selectBetChip {
+    padding: 0 0 0 var(--padding_left_vk);
+    margin-bottom: 15px
+}
+
+.gameDice3 .modalBet .selectBetChip .chip {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    text-align: center;
+    background: var(--events_card_color_bg);
+    border-radius: 14px;
+    color: var(--bw_color_text_lite)
+}
+
+.gameDice3 .modalBet .selectBetChip .chip.selected {
+    background: #ff9800;
+    color: #fff
+}
+
+.gameDice3 .modalBet .selectBetChip .chip.disabled {
+    opacity: .5
+}
+
+.gameDice3 .modalBet .Input {
+    margin-top: 15px;
+    border-radius: 14px
+}
+
+.gameDice3 .modalBet .Input .FormField__border {
+    border-radius: 14px
+}
+
+.gameDice3 .modalBet .Button {
+    margin-top: 15px;
+    border-radius: 14px
+}
+
+.gameDice3 .FormLayout__row {
+    padding: 0
+}
+
+.gameDice3 .modal.selectNumber {
+    padding: 0 var(--padding_left_vk);
+    text-align: center
+}
+
+.gameDice3 .modal.selectNumber .number {
+    display: inline-block;
+    width: calc(25% - 6px);
+    margin: 0 3px 8px;
+    padding: 8px 0;
+    text-align: center;
+    background: #101010;
+    color: #fff;
+    border-radius: 12px
+}
+
+.gameDice3 .modal.selectNumber .number.c1 {
+    background: #f44336
+}
+
+
+@-webkit-keyframes dice2-wrapper-animation1 {
+    0% {
+        -webkit-transform: translate(-83.33333vw, -70px);
+        transform: translate(-83.33333vw, -70px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
+@keyframes dice2-wrapper-animation1 {
+    0% {
+        -webkit-transform: translate(-83.33333vw, -70px);
+        transform: translate(-83.33333vw, -70px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
+@-webkit-keyframes dice2-animation1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(3turn);
+        transform: rotate(3turn)
+    }
+}
+
+@keyframes dice2-animation1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(3turn);
+        transform: rotate(3turn)
+    }
+}
+
+@-webkit-keyframes dice2-wrapper-animation2 {
+    0% {
+        -webkit-transform: translate(83.33333vw, -150px);
+        transform: translate(83.33333vw, -150px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
+@keyframes dice2-wrapper-animation2 {
+    0% {
+        -webkit-transform: translate(83.33333vw, -150px);
+        transform: translate(83.33333vw, -150px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
+@-webkit-keyframes dice2-animation2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(-3turn);
+        transform: rotate(-3turn)
+    }
+}
+
+@keyframes dice2-animation2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(-3turn);
+        transform: rotate(-3turn)
+    }
+}
+
+@-webkit-keyframes dice3-result {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    to {
+        -webkit-transform: translate(60px);
+        transform: translate(60px)
+    }
+}
+
+@keyframes dice3-result {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    to {
+        -webkit-transform: translate(60px);
+        transform: translate(60px)
+    }
+}
+#rating .prize {
+    text-align: center
+}
+
+#rating .prize .header {
+    font-size: 12px;
+    color: white;
+    opacity: .7;
+    font-weight: 400;
+    line-height: 12px
+}
+
+#rating .prize .sum {
+    margin-top: 0;
+    font-size: 18px;
+    color: #03a9f4;
+    font-weight: 500
+}
+
+.itemKeno {
+    margin: 2px;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    width: calc(20% - 4px);
+    height: 55px;
+    border-radius: 12px;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background: rgba(0,0,0,.1);
+    justify-items: center;
+    vertical-align: middle;
+    color: #ecf0f1;
+    transition: background .2s linear;
+}
+.itemKeno.w {
+    background-color: #2196f3;
+    color: white;
+    opacity: 1;
+}
+.itemKeno.c {
+    color: rgba(255, 255, 255, .2);
+}
+.itemKeno.win {
+    background-color: #8bc34a;
+}
+.itemKeno.zero {
+    background-color: #f44336;
+}
